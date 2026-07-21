@@ -3,6 +3,7 @@ import 'package:e_commerce/app/providers/locale_provider.dart';
 import 'package:e_commerce/app/providers/theme_mode_provider.dart';
 import 'package:e_commerce/app/routes.dart';
 import 'package:e_commerce/features/auth/presentation/screens/splash_screen.dart';
+import 'package:e_commerce/features/shared/provider/main_nav_holder_provider.dart';
 import 'package:e_commerce/l10n/app_localizations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -18,6 +19,7 @@ class CraftyBarApp extends StatefulWidget {
 class _CraftyBarAppState extends State<CraftyBarApp> {
   final ThemeModeProvider _themeModeProvider = ThemeModeProvider();
   final LocaleProvider _localeProvider = LocaleProvider();
+  final MainNavHolderProvider _mainNavHolderProvider = MainNavHolderProvider();
   @override
   void initState() {
     super.initState();
@@ -29,7 +31,8 @@ class _CraftyBarAppState extends State<CraftyBarApp> {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [ChangeNotifierProvider.value(value: _themeModeProvider),
-      ChangeNotifierProvider.value(value: _localeProvider)
+      ChangeNotifierProvider.value(value: _localeProvider),
+      ChangeNotifierProvider.value(value: _mainNavHolderProvider)
       ],
       child: Consumer<LocaleProvider>(
         builder: (context,localeProvider,_) {

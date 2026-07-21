@@ -1,5 +1,9 @@
 {
-  "version": "Version"
-  
-
+  "version": "Version",
+  "email":"Email",
+  "password" : "Password",
+  "firstName" : "First Name",
+  "lastName": "Last Name",
+  "city":"City",
+  "phone": "Phone"
 }

@@ -10,4 +10,22 @@ class AppLocalizationsBn extends AppLocalizations {
 
   @override
   String get version => 'সংস্করণ';
+
+  @override
+  String get email => 'Email bn';
+
+  @override
+  String get password => 'Password bn';
+
+  @override
+  String get firstName => 'First Name bn';
+
+  @override
+  String get lastName => 'Last Name bn';
+
+  @override
+  String get city => 'City bn';
+
+  @override
+  String get phone => 'Phone bn';
 }

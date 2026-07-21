@@ -1,5 +1,8 @@
 import 'package:e_commerce/features/auth/presentation/screens/sign_in_screen.dart';
+import 'package:e_commerce/features/auth/presentation/screens/sign_up_screen.dart';
 import 'package:e_commerce/features/auth/presentation/screens/splash_screen.dart';
+import 'package:e_commerce/features/auth/presentation/screens/verify_otp_screen.dart';
+import 'package:e_commerce/features/shared/presentation/main_nav_holder_screen.dart';
 import 'package:flutter/material.dart';
 
 class AppRoutes{
@@ -12,6 +15,12 @@ class AppRoutes{
         widget=SplashScreen();
       case SignInScreen.routeName:
         widget=SignInScreen();
+      case SignUpScreen.routeName:
+        widget=SignUpScreen();
+      case VerifyOtpScreen.routeName:
+        widget=VerifyOtpScreen();
+      case MainNavHolderScreen.routeName:
+        widget=MainNavHolderScreen();
     }
     return MaterialPageRoute(builder: (_)=>widget);
   }

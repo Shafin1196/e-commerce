@@ -21,10 +21,20 @@ class AppTheme {
       ),
     ),
     inputDecorationTheme: _inputDecorationTheme,
+    filledButtonTheme: _filledButtonTheme,
    );
 
  
-
+  static final FilledButtonThemeData _filledButtonTheme= FilledButtonThemeData(
+    style:FilledButton.styleFrom(
+      backgroundColor: AppColor.themeColor,
+      fixedSize: Size.fromWidth(double.maxFinite),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(8),
+      ),
+    ),
+  );
+  
   static final ThemeData _darkThemeData= ThemeData(
     colorSchemeSeed: AppColor.themeColor,
     brightness: Brightness.dark,
@@ -33,7 +43,7 @@ class AppTheme {
       
     ),
     scaffoldBackgroundColor: Colors.black,
-
+   filledButtonTheme: _filledButtonTheme,
     textTheme: const TextTheme(
       titleLarge: TextStyle(
         fontSize: 24,
@@ -56,6 +66,12 @@ class AppTheme {
                     ),
                   ),
                   focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(
+                      color: AppColor.themeColor,
+                      width: 2
+                    ),
+                  ),
+                  border: OutlineInputBorder(
                     borderSide: BorderSide(
                       color: AppColor.themeColor,
                       width: 2

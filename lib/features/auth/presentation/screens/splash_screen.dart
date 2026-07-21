@@ -1,5 +1,5 @@
-import 'package:e_commerce/features/auth/presentation/screens/sign_in_screen.dart';
 import 'package:e_commerce/features/auth/presentation/widgets/app_logo.dart';
+import 'package:e_commerce/features/shared/presentation/main_nav_holder_screen.dart';
 import 'package:e_commerce/l10n/app_localizations.dart';
 import 'package:flutter/material.dart';
 class SplashScreen extends StatefulWidget {
@@ -13,7 +13,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     Future.delayed(const Duration(seconds: 3), () {
-      Navigator.pushReplacementNamed(context, SignInScreen.routeName);
+      Navigator.pushReplacementNamed(context, MainNavHolderScreen.routeName);
     });
   }
   @override
