@@ -1,4 +1,5 @@
 import 'package:e_commerce/app/app_color.dart';
+import 'package:e_commerce/features/home/presentaion/screens/home_screen.dart';
 import 'package:e_commerce/features/shared/provider/main_nav_holder_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -11,11 +12,19 @@ class MainNavHolderScreen extends StatefulWidget {
 }
 
 class _MainNavHolderScreenState extends State<MainNavHolderScreen> {
+  final List<Widget> _screens = [
+     HomeScreen(),
+     HomeScreen(),
+     HomeScreen(),
+     HomeScreen(),
+    
+  ];
   @override
   Widget build(BuildContext context) {
     return Consumer<MainNavHolderProvider>(
       builder: (context, mainNavHolderProvider, _) {
         return Scaffold(
+
           bottomNavigationBar: BottomNavigationBar(
             currentIndex: mainNavHolderProvider.currentIndex,
             unselectedItemColor: Colors.grey,
@@ -41,9 +50,7 @@ class _MainNavHolderScreenState extends State<MainNavHolderScreen> {
               ),
             ],
           ),
-          body: Center(
-            child: Text('Main Nav Holder Screen'),
-          ),
+          body: _screens[mainNavHolderProvider.currentIndex],
         );
       }
     );

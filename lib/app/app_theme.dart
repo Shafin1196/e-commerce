@@ -10,6 +10,9 @@ class AppTheme {
       color: AppColor.themeColor,
     ),
     scaffoldBackgroundColor: Colors.white,
+    appBarTheme: const AppBarTheme(
+      backgroundColor: Colors.white,
+    ),
     textTheme: const TextTheme(
       titleLarge: TextStyle(
         fontSize: 24,
@@ -41,6 +44,9 @@ class AppTheme {
     progressIndicatorTheme: const ProgressIndicatorThemeData(
       color: AppColor.themeColor,
       
+    ),
+    appBarTheme: const AppBarTheme(
+      backgroundColor: Colors.black,
     ),
     scaffoldBackgroundColor: Colors.black,
    filledButtonTheme: _filledButtonTheme,

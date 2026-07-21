@@ -19,4 +19,4 @@ FlutterError.onError = (errorDetails) {
       return true;
     };
   runApp(const CraftyBarApp());
-}
+} 
